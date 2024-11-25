@@ -82,3 +82,56 @@ Follow these steps to set up the system on a Raspberry Pi:
 1. Open the terminal and install `virtualenv`:
    ```bash
    sudo apt-get install python3-venv
+
+ 
+### 3. Create a virtual environment:
+
+ ```bash
+
+python3 -m venv garbage_env
+
+####4. Activate the virtual environment:
+
+ ```bash
+
+source garbage_env/bin/activate
+Upgrade pip and install required packages:
+
+bash
+
+pip install --upgrade pip
+pip install tensorflow numpy opencv-python pillow flask
+Deploy the LOBE Model
+Train your garbage classification model using LOBE on your desktop.
+Export the model in TensorFlow Lite (.tflite) format.
+Transfer the model file (e.g., model.tflite) to the Raspberry Pi using scp or a USB drive.
+Clone the Repository
+Clone this GitHub repository on your Raspberry Pi:
+
+bash
+
+git clone https://github.com/yourusername/ai-smart-garbage-classifier.git
+cd ai-smart-garbage-classifier
+Run the Application
+Run the classification script:
+
+bash
+
+python classify.py
+How It Works
+The Raspberry Pi camera captures an image of the garbage.
+The image is processed by the LOBE-trained TensorFlow Lite model.
+The system classifies the garbage into predefined categories (e.g., recyclable, organic).
+Classification results are displayed on the terminal or a connected web interface.
+Future Enhancements
+Expand the model to classify additional waste categories.
+Add robotic integration for automated sorting.
+Develop a mobile app for real-time monitoring and user interaction.
+Integrate with IoT platforms for smart city waste management.
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+Contributions 🤝
+We welcome contributions! Feel free to submit issues, pull requests, or suggestions for improving this project. Together, let’s build a smarter and cleaner future! 🌍
+
+
